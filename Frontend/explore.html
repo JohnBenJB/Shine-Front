@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/explore.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">Shine</div>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search content or artist...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+        <i class="fas fa-message message-icon"></i>
+        <i class="fas fa-bars menu-icon" onclick="toggleSidebar()"></i>
+    </header>
+    <div class="content-wrapper">
+        <!-- Your content here -->
+
+        <main class="main-content">
+
+            <!-- Search and Filter -->
+            <section class="search-and-filter">
+                <div class="filter-options">
+                    <button class="filter-button">
+                        <i class="fas fa-filter"></i>
+                        <span>Filter</span>
+                    </button>
+                    <select class="filter-select">
+                        <option value="trending">Trending</option>
+                        <option value="newest">Newest</option>
+                        <option value="topBlessed">Top Blessed</option>
+                    </select>
+                    <select class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="music">Music</option>
+                        <option value="sermon">Sermons</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Featured Artists Carousel -->
+            <section class="featured-artists">
+                <h2 class="section-title">Featured Artists</h2>
+                <div class="horizontal-scroll">
+                    <!-- Repeat content cards for horizontal scroll -->
+                    <div class="content-card" style="min-width: 280px;">
+                        <div class="card-header">
+                            <div class="artist-info">
+                                <img src="images/artist-2.jpeg" alt="Artist Avatar" class="artist-avatar">
+                                <div class="artist-details">
+                                    <span class="artist-name">Artist Name</span>
+                                    <span class="shine-code">Shine ID</span>
+                                </div>
+                            </div>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                        <div class="content-image-container">
+                            <img src="images/artist-2.jpeg" alt="Artist" class="content-image">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="interaction-buttons">
+                            <button class="interaction-button">
+                                <i class="far fa-thumbs-up"></i>
+                                <span>Follow</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="content-card" style="min-width: 280px;">
+                        <div class="card-header">
+                            <div class="artist-info">
+                                <img src="images/artist-1.jpeg" alt="Artist Avatar" class="artist-avatar">
+                                <div class="artist-details">
+                                    <span class="artist-name">Artist Name</span>
+                                    <span class="shine-code">Shine ID</span>
+                                </div>
+                            </div>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                        <div class="content-image-container">
+                            <img src="images/artist-1.jpeg" alt="Artist" class="content-image">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="interaction-buttons">
+                            <button class="interaction-button">
+                                <i class="far fa-thumbs-up"></i>
+                                <span>Follow</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+            </section>
+
+            <!-- Trending Content -->
+            <section class="trending-content">
+                <h2 class="section-title">Trending Content</h2>
+
+                <!-- Trending Music -->
+                <div class="content-category">
+                    <h3 class="category-title">Trending Music</h3>
+                    <div class="horizontal-scroll">
+                        <!-- Repeat content cards for horizontal scroll -->
+                        <div class="content-card" style="min-width: 280px;">
+                            <div class="card-header">
+                                <div class="artist-info">
+                                    <img src="images/artist-7.jpeg" alt="Artist Avatar" class="artist-avatar">
+                                    <div class="artist-details">
+                                        <span class="artist-name">Content Title</span>
+                                        <span class="shine-code">Artist Name - Shine ID</span>
+                                    </div>
+                                </div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                            <div class="content-image-container">
+                                <img src="images/artist-7.jpeg" alt="Content" class="content-image">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="interaction-buttons">
+                                <button class="interaction-button">
+                                    <i class="far fa-thumbs-up"></i>
+                                    <span>Like</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="far fa-comment"></i>
+                                    <span>Comment</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-donate"></i>
+                                    <span>Bless</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-bullhorn"></i>
+                                    <span>Celebrate</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="content-card" style="min-width: 280px;">
+                            <div class="card-header">
+                                <div class="artist-info">
+                                    <img src="images/artist-4.jpeg" alt="Artist Avatar" class="artist-avatar">
+                                    <div class="artist-details">
+                                        <span class="artist-name">Content Title</span>
+                                        <span class="shine-code">Artist Name - Shine ID</span>
+                                    </div>
+                                </div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                            <div class="content-image-container">
+                                <img src="images/artist-4.jpeg" alt="Content" class="content-image">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="interaction-buttons">
+                                <button class="interaction-button">
+                                    <i class="far fa-thumbs-up"></i>
+                                    <span>Like</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="far fa-comment"></i>
+                                    <span>Comment</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-donate"></i>
+                                    <span>Bless</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-bullhorn"></i>
+                                    <span>Celebrate</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Add more cards as needed -->
+                    </div>
+                </div>
+
+                <!-- Top Blessed Sermons -->
+                <div class="content-category">
+                    <h3 class="category-title">Top Blessed</h3>
+                    <div class="horizontal-scroll">
+                        <!-- Repeat content cards for horizontal scroll -->
+                        <div class="content-card" style="min-width: 280px;">
+                            <div class="card-header">
+                                <div class="artist-info">
+                                    <img src="images/artist-7.jpeg" alt="Artist Avatar" class="artist-avatar">
+                                    <div class="artist-details">
+                                        <span class="artist-name">Content Title</span>
+                                        <span class="shine-code">Artist Name - Shine ID</span>
+                                    </div>
+                                </div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                            <div class="content-image-container">
+                                <img src="images/artist-7.jpeg" alt="Content" class="content-image">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="interaction-buttons">
+                                <button class="interaction-button">
+                                    <i class="far fa-thumbs-up"></i>
+                                    <span>Like</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="far fa-comment"></i>
+                                    <span>Comment</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-donate"></i>
+                                    <span>Bless</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-bullhorn"></i>
+                                    <span>Celebrate</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="content-card" style="min-width: 280px;">
+                            <div class="card-header">
+                                <div class="artist-info">
+                                    <img src="images/artist-1.jpeg" alt="Artist Avatar" class="artist-avatar">
+                                    <div class="artist-details">
+                                        <span class="artist-name">Content Title</span>
+                                        <span class="shine-code">Artist Name - Shine ID</span>
+                                    </div>
+                                </div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                            <div class="content-image-container">
+                                <img src="images/artist-1.jpeg" alt="Content" class="content-image">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="interaction-buttons">
+                                <button class="interaction-button">
+                                    <i class="far fa-thumbs-up"></i>
+                                    <span>Like</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="far fa-comment"></i>
+                                    <span>Comment</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-donate"></i>
+                                    <span>Bless</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-bullhorn"></i>
+                                    <span>Celebrate</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="content-card" style="min-width: 280px;">
+                            <div class="card-header">
+                                <div class="artist-info">
+                                    <img src="images/artist-3.jpeg" alt="Artist Avatar" class="artist-avatar">
+                                    <div class="artist-details">
+                                        <span class="artist-name">Content Title</span>
+                                        <span class="shine-code">Artist Name - Shine ID</span>
+                                    </div>
+                                </div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                            <div class="content-image-container">
+                                <img src="images/artist-3.jpeg" alt="Content" class="content-image">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="interaction-buttons">
+                                <button class="interaction-button">
+                                    <i class="far fa-thumbs-up"></i>
+                                    <span>Like</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="far fa-comment"></i>
+                                    <span>Comment</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-donate"></i>
+                                    <span>Bless</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-bullhorn"></i>
+                                    <span>Celebrate</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Add more cards as needed -->
+                    </div>
+                </div>
+
+                <!-- Most Celebrated -->
+                <div class="content-category">
+                    <h3 class="category-title">Most Celebrated</h3>
+                    <div class="horizontal-scroll">
+                        <!-- Repeat content cards for horizontal scroll -->
+                        <div class="content-card" style="min-width: 280px;">
+                            <div class="card-header">
+                                <div class="artist-info">
+                                    <img src="images/artist-7.jpeg" alt="Artist Avatar" class="artist-avatar">
+                                    <div class="artist-details">
+                                        <span class="artist-name">Content Title</span>
+                                        <span class="shine-code">Artist Name - Shine ID</span>
+                                    </div>
+                                </div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                            <div class="content-image-container">
+                                <img src="images/artist-7.jpeg" alt="Content" class="content-image">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="interaction-buttons">
+                                <button class="interaction-button">
+                                    <i class="far fa-thumbs-up"></i>
+                                    <span>Like</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="far fa-comment"></i>
+                                    <span>Comment</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-donate"></i>
+                                    <span>Bless</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-bullhorn"></i>
+                                    <span>Celebrate</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="content-card" style="min-width: 280px;">
+                            <div class="card-header">
+                                <div class="artist-info">
+                                    <img src="images/artist-1.jpeg" alt="Artist Avatar" class="artist-avatar">
+                                    <div class="artist-details">
+                                        <span class="artist-name">Content Title</span>
+                                        <span class="shine-code">Artist Name - Shine ID</span>
+                                    </div>
+                                </div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                            <div class="content-image-container">
+                                <img src="images/artist-1.jpeg" alt="Content" class="content-image">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="interaction-buttons">
+                                <button class="interaction-button">
+                                    <i class="far fa-thumbs-up"></i>
+                                    <span>Like</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="far fa-comment"></i>
+                                    <span>Comment</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-donate"></i>
+                                    <span>Bless</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-bullhorn"></i>
+                                    <span>Celebrate</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="content-card" style="min-width: 280px;">
+                            <div class="card-header">
+                                <div class="artist-info">
+                                    <img src="images/artist-3.jpeg" alt="Artist Avatar" class="artist-avatar">
+                                    <div class="artist-details">
+                                        <span class="artist-name">Content Title</span>
+                                        <span class="shine-code">Artist Name - Shine ID</span>
+                                    </div>
+                                </div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                            <div class="content-image-container">
+                                <img src="images/artist-3.jpeg" alt="Content" class="content-image">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="interaction-buttons">
+                                <button class="interaction-button">
+                                    <i class="far fa-thumbs-up"></i>
+                                    <span>Like</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="far fa-comment"></i>
+                                    <span>Comment</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-donate"></i>
+                                    <span>Bless</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-bullhorn"></i>
+                                    <span>Celebrate</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Add more cards as needed -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Music and Sermons -->
+            <section class="content-categories">
+                <!-- Music -->
+                <div class="content-category">
+                    <h3 class="category-title">Music</h3>
+                    <div class="content-grid">
+                        <!-- Repeat content cards for grid -->
+                        <div class="content-card" style="min-width: 280px;">
+                            <div class="card-header">
+                                <div class="artist-info">
+                                    <img src="images/artist-7.jpeg" alt="Artist Avatar" class="artist-avatar">
+                                    <div class="artist-details">
+                                        <span class="artist-name">Content Title</span>
+                                        <span class="shine-code">Artist Name - Shine ID</span>
+                                    </div>
+                                </div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                            <div class="content-image-container">
+                                <img src="images/artist-7.jpeg" alt="Content" class="content-image">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="interaction-buttons">
+                                <button class="interaction-button">
+                                    <i class="far fa-thumbs-up"></i>
+                                    <span>Like</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="far fa-comment"></i>
+                                    <span>Comment</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-donate"></i>
+                                    <span>Bless</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-bullhorn"></i>
+                                    <span>Celebrate</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="content-card" style="min-width: 280px;">
+                            <div class="card-header">
+                                <div class="artist-info">
+                                    <img src="images/artist-1.jpeg" alt="Artist Avatar" class="artist-avatar">
+                                    <div class="artist-details">
+                                        <span class="artist-name">Content Title</span>
+                                        <span class="shine-code">Artist Name - Shine ID</span>
+                                    </div>
+                                </div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                            <div class="content-image-container">
+                                <img src="images/artist-1.jpeg" alt="Content" class="content-image">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="interaction-buttons">
+                                <button class="interaction-button">
+                                    <i class="far fa-thumbs-up"></i>
+                                    <span>Like</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="far fa-comment"></i>
+                                    <span>Comment</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-donate"></i>
+                                    <span>Bless</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-bullhorn"></i>
+                                    <span>Celebrate</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="content-card" style="min-width: 280px;">
+                            <div class="card-header">
+                                <div class="artist-info">
+                                    <img src="images/artist-3.jpeg" alt="Artist Avatar" class="artist-avatar">
+                                    <div class="artist-details">
+                                        <span class="artist-name">Content Title</span>
+                                        <span class="shine-code">Artist Name - Shine ID</span>
+                                    </div>
+                                </div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                            <div class="content-image-container">
+                                <img src="images/artist-3.jpeg" alt="Content" class="content-image">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="interaction-buttons">
+                                <button class="interaction-button">
+                                    <i class="far fa-thumbs-up"></i>
+                                    <span>Like</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="far fa-comment"></i>
+                                    <span>Comment</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-donate"></i>
+                                    <span>Bless</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-bullhorn"></i>
+                                    <span>Celebrate</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Add more cards as needed -->
+                    </div>
+                </div>
+
+                <!-- Sermons -->
+                <div class="content-category">
+                    <h3 class="category-title">Sermons</h3>
+                    <div class="content-grid">
+                        <!-- Repeat content cards for grid -->
+                        <div class="content-card" style="min-width: 280px;">
+                            <div class="card-header">
+                                <div class="artist-info">
+                                    <img src="images/artist-7.jpeg" alt="Artist Avatar" class="artist-avatar">
+                                    <div class="artist-details">
+                                        <span class="artist-name">Content Title</span>
+                                        <span class="shine-code">Artist Name - Shine ID</span>
+                                    </div>
+                                </div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                            <div class="content-image-container">
+                                <img src="images/artist-7.jpeg" alt="Content" class="content-image">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="interaction-buttons">
+                                <button class="interaction-button">
+                                    <i class="far fa-thumbs-up"></i>
+                                    <span>Like</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="far fa-comment"></i>
+                                    <span>Comment</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-donate"></i>
+                                    <span>Bless</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-bullhorn"></i>
+                                    <span>Celebrate</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="content-card" style="min-width: 280px;">
+                            <div class="card-header">
+                                <div class="artist-info">
+                                    <img src="images/artist-1.jpeg" alt="Artist Avatar" class="artist-avatar">
+                                    <div class="artist-details">
+                                        <span class="artist-name">Content Title</span>
+                                        <span class="shine-code">Artist Name - Shine ID</span>
+                                    </div>
+                                </div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                            <div class="content-image-container">
+                                <img src="images/artist-1.jpeg" alt="Content" class="content-image">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="interaction-buttons">
+                                <button class="interaction-button">
+                                    <i class="far fa-thumbs-up"></i>
+                                    <span>Like</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="far fa-comment"></i>
+                                    <span>Comment</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-donate"></i>
+                                    <span>Bless</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-bullhorn"></i>
+                                    <span>Celebrate</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="content-card" style="min-width: 280px;">
+                            <div class="card-header">
+                                <div class="artist-info">
+                                    <img src="images/artist-3.jpeg" alt="Artist Avatar" class="artist-avatar">
+                                    <div class="artist-details">
+                                        <span class="artist-name">Content Title</span>
+                                        <span class="shine-code">Artist Name - Shine ID</span>
+                                    </div>
+                                </div>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                            <div class="content-image-container">
+                                <img src="images/artist-3.jpeg" alt="Content" class="content-image">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="interaction-buttons">
+                                <button class="interaction-button">
+                                    <i class="far fa-thumbs-up"></i>
+                                    <span>Like</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="far fa-comment"></i>
+                                    <span>Comment</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-donate"></i>
+                                    <span>Bless</span>
+                                </button>
+                                <button class="interaction-button">
+                                    <i class="fas fa-bullhorn"></i>
+                                    <span>Celebrate</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Add more cards as needed -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="right-sidebar">
+            <div class="sidebar-section">
+                <h3>You ></h3>
+                <ul>
+                    <li><i class="fas fa-history"></i> Recently Watched</li>
+                    <li><i class="fas fa-clock"></i> Activity History</li>
+                    <li><i class="fas fa-list-alt"></i> Playlist</li>
+                    <li><i class="fas fa-upload"></i> Your Posts</li>
+                    <li><i class="fas fa-save"></i> Watch Later</li>
+                    <li><i class="fas fa-download"></i> Downloads</li>
+                    <li><i class="fas fa-hands-helping"></i> Count Your Blessings</li>
+                    <li><i class="fas fa-gear"></i> Settings</li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <h3>Following</h3>
+                <ul>
+                    <!-- Example following item -->
+                    <li><img src="images/artist-1.jpeg" alt="Artist Profile" class="profile-pic"> Artist Name</li>
+                    <li><img src="images/artist-2.jpeg" alt="Artist Profile" class="profile-pic"> Artist Name</li>
+                    <li><img src="images/artist-3.jpeg" alt="Artist Profile" class="profile-pic"> Artist Name</li>
+                    <li><img src="images/artist-4.jpeg" alt="Artist Profile" class="profile-pic"> Artist Name</li>
+                </ul>
+            </div>
+        </aside>
+
+        <nav class="bottom-nav">
+            <a href="home.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="explore.html" class="nav-item">
+                <i class="fas fa-compass"></i>
+                <span>Explore</span>
+            </a>
+            <a href="upload.html" class="create-button">
+                <i class="fas fa-plus"></i>
+            </a>
+            <a href="notification.html" class="nav-item">
+                <i class="fas fa-bell"></i>
+                <span>Notifications</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>You</span>
+            </a>
+        </nav>
+
+        <script>
+            function toggleSidebar() {
+                document.querySelector('.right-sidebar').classList.toggle('show-sidebar');
+            }
+        </script>
+</body>
+
+</html>

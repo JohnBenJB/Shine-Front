@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shine - Gospel Content Platform</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/notification.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">Shine</div>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+        <i class="fas fa-message message-icon"></i>
+        <i class="fas fa-bars menu-icon" onclick="toggleSidebar()"></i>
+    </header>
+    <div class="content-wrapper">
+        <!-- Your content here -->
+
+        <main class="main-content">
+            <section class="notifications-section">
+                <div class="notifications-controls">
+                    <h2 class="section-title">Notifications</h2>
+                    <div class="notification-actions">
+                        <button class="mark-read-btn">
+                            <i class="fas fa-check-double"></i>
+                            Mark all as read
+                        </button>
+                        <div class="filter-controls">
+                            <button class="filter-btn active">All</button>
+                            <button class="filter-btn">Unread</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="notifications-feed">
+                <!-- Blessing Notification -->
+                <div class="content-card notification-card unread">
+                    <div class="notification-content">
+                        <div class="artist-info">
+                            <img src="images/artist-1.jpeg" alt="User Avatar" class="artist-avatar">
+                            <div class="notification-details">
+                                <span class="artist-name">John Doe blessed your content</span>
+                                <span class="shine-code">$5.00 • 2 hours ago</span>
+                            </div>
+                        </div>
+                        <span class="unread-indicator"></span>
+                    </div>
+                </div>
+
+                <!-- New Follower Notification -->
+                <div class="content-card notification-card">
+                    <div class="notification-content">
+                        <div class="artist-info">
+                            <img src="images/artist-2.jpeg" alt="User Avatar" class="artist-avatar">
+                            <div class="notification-details">
+                                <span class="artist-name">Jane Smith started following you</span>
+                                <span class="shine-code">5 hours ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comment Notification -->
+                <div class="content-card notification-card unread">
+                    <div class="notification-content">
+                        <div class="artist-info">
+                            <img src="images/artist-3.jpeg" alt="User Avatar" class="artist-avatar">
+                            <div class="notification-details">
+                                <span class="artist-name">Mike Johnson commented on your post</span>
+                                <span class="shine-code">"Great content!" • 1 day ago</span>
+                            </div>
+                        </div>
+                        <span class="unread-indicator"></span>
+                    </div>
+                </div>
+
+                <!-- Like Notification -->
+                <div class="content-card notification-card">
+                    <div class="notification-content">
+                        <div class="artist-info">
+                            <img src="images/artist-4.jpeg" alt="User Avatar" class="artist-avatar">
+                            <div class="notification-details">
+                                <span class="artist-name">Sarah Williams liked your post</span>
+                                <span class="shine-code">2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Announcement Notification -->
+                <div class="content-card notification-card announcement">
+                    <div class="notification-content">
+                        <div class="artist-info">
+                            <i class="fas fa-bullhorn announcement-icon"></i>
+                            <div class="notification-details">
+                                <span class="artist-name">New Feature Alert!</span>
+                                <span class="shine-code">We've added new interaction options for content sharing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blessing Notification -->
+                <div class="content-card notification-card unread">
+                    <div class="notification-content">
+                        <div class="artist-info">
+                            <img src="images/artist-1.jpeg" alt="User Avatar" class="artist-avatar">
+                            <div class="notification-details">
+                                <span class="artist-name">John Doe blessed your content</span>
+                                <span class="shine-code">$5.00 • 2 hours ago</span>
+                            </div>
+                        </div>
+                        <span class="unread-indicator"></span>
+                    </div>
+                </div>
+
+                <!-- New Follower Notification -->
+                <div class="content-card notification-card unread">
+                    <div class="notification-content">
+                        <div class="artist-info">
+                            <img src="images/artist-2.jpeg" alt="User Avatar" class="artist-avatar">
+                            <div class="notification-details">
+                                <span class="artist-name">Jane Smith started following you</span>
+                                <span class="shine-code">5 hours ago</span>
+                            </div>
+                        </div>
+                        <span class="unread-indicator"></span>
+                    </div>
+                </div>
+
+                <!-- Comment Notification -->
+                <div class="content-card notification-card unread">
+                    <div class="notification-content">
+                        <div class="artist-info">
+                            <img src="images/artist-3.jpeg" alt="User Avatar" class="artist-avatar">
+                            <div class="notification-details">
+                                <span class="artist-name">Mike Johnson commented on your post</span>
+                                <span class="shine-code">"Great content!" • 1 day ago</span>
+                            </div>
+                        </div>
+                        <span class="unread-indicator"></span>
+                    </div>
+                </div>
+
+                <!-- Like Notification -->
+                <div class="content-card notification-card unread">
+                    <div class="notification-content">
+                        <div class="artist-info">
+                            <img src="images/artist-4.jpeg" alt="User Avatar" class="artist-avatar">
+                            <div class="notification-details">
+                                <span class="artist-name">Sarah Williams liked your post</span>
+                                <span class="shine-code">2 days ago</span>
+                            </div>
+                        </div>
+                        <span class="unread-indicator"></span>
+                    </div>
+                </div>
+
+                <!-- Announcement Notification -->
+                <div class="content-card notification-card announcement unread">
+                    <div class="notification-content">
+                        <div class="artist-info">
+                            <i class="fas fa-bullhorn announcement-icon"></i>
+                            <div class="notification-details">
+                                <span class="artist-name">New Feature Alert!</span>
+                                <span class="shine-code">We've added new interaction options for content sharing</span>
+                            </div>
+                        </div>
+                        <span class="unread-indicator"></span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="right-sidebar">
+            <div class="sidebar-section">
+                <h3>You ></h3>
+                <ul>
+                    <li><i class="fas fa-history"></i> Recently Watched</li>
+                    <li><i class="fas fa-clock"></i> Activity History</li>
+                    <li><i class="fas fa-list-alt"></i> Playlist</li>
+                    <li><i class="fas fa-upload"></i> Your Posts</li>
+                    <li><i class="fas fa-save"></i> Watch Later</li>
+                    <li><i class="fas fa-download"></i> Downloads</li>
+                    <li><i class="fas fa-hands-helping"></i> Count Your Blessings</li>
+                    <li><i class="fas fa-gear"></i> Settings</li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <h3>Following</h3>
+                <ul>
+                    <!-- Example following item -->
+                    <li><img src="images/artist-1.jpeg" alt="Artist Profile" class="profile-pic"> Artist Name</li>
+                    <li><img src="images/artist-2.jpeg" alt="Artist Profile" class="profile-pic"> Artist Name</li>
+                    <li><img src="images/artist-3.jpeg" alt="Artist Profile" class="profile-pic"> Artist Name</li>
+                    <li><img src="images/artist-4.jpeg" alt="Artist Profile" class="profile-pic"> Artist Name</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="home.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="explore.html" class="nav-item">
+            <i class="fas fa-compass"></i>
+            <span>Explore</span>
+        </a>
+        <a href="upload.html" class="create-button">
+            <i class="fas fa-plus"></i>
+        </a>
+        <a href="notification.html" class="nav-item">
+            <i class="fas fa-bell"></i>
+            <span>Notifications</span>
+        </a>
+        <a href="profile.html" class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>You</span>
+        </a>
+    </nav>
+
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.right-sidebar').classList.toggle('show-sidebar');
+        }
+    </script>
+</body>
+
+</html>

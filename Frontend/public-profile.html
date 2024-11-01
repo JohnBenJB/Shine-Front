@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shine - Gospel Content Platform</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/profile.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">Shine</div>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+        <i class="fas fa-message message-icon"></i>
+        <i class="fas fa-bars menu-icon" onclick="toggleSidebar()"></i>
+    </header>
+    <div class="content-wrapper">
+        <!-- Your content here -->
+
+        <main class="main-content profile-view">
+            <!-- Profile Header Section -->
+            <section class="profile-header">
+                <div class="profile-cover">
+                    <!-- Cover Photo Background -->
+                    <div class="profile-picture-wrapper">
+                        <img src="images/artist-1.jpeg" alt="Artist Profile" class="profile-picture">
+                    </div>
+                </div>
+
+                <div class="profile-info">
+                    <div class="profile-main-info">
+                        <div class="profile-name-code">
+                            <h1 class="profile-name">Artist Name</h1>
+                            <span class="profile-shine-code">SHINE-1234</span>
+                        </div>
+
+                        <div class="profile-actions">
+                            <button class="action-button primary">
+                                <i class="fas fa-user-plus"></i>
+                                <span>Follow</span>
+                            </button>
+                            <button class="action-button">
+                                <i class="fas fa-message"></i>
+                                <span>Message</span>
+                            </button>
+                            <button class="action-button">
+                                <i class="fas fa-bullhorn"></i>
+                                <span>Celebrate</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="profile-bio">
+                        Gospel artist passionate about spreading the word through music.
+                        Based in Lagos, Nigeria. Winner of multiple gospel music awards.
+                    </p>
+
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">10.5K</span>
+                            <span class="stat-label">Followers</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">1.2K</span>
+                            <span class="stat-label">Following</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">156</span>
+                            <span class="stat-label">Posts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Support Artist Section -->
+                <div class="support-section">
+                    <button class="support-button">
+                        <i class="fas fa-donate"></i>
+                        <span>Bless This Ministry</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Content Feed Section -->
+            <section class="profile-content">
+                <!-- Content Navigation -->
+                <div class="content-navigation">
+                    <button class="nav-tab active">All Posts</button>
+                    <button class="nav-tab">Music</button>
+                    <button class="nav-tab">Sermons</button>
+                    <button class="nav-tab">Videos</button>
+                </div>
+
+                <!-- Content Grid -->
+                <div class="content-feed">
+                    <!-- Content Card (reusing the structure from home page) -->
+                    <div class="content-card">
+                        <div class="card-header">
+                            <div class="artist-info">
+                                <img src="images/artist-1.jpeg" alt="Artist Avatar" class="artist-avatar">
+                                <div class="artist-details">
+                                    <span class="artist-name">New Single Release</span>
+                                    <span class="shine-code">Posted 2 days ago</span>
+                                </div>
+                            </div>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                        <div class="content-image-container">
+                            <img src="images/artist-2.jpeg" alt="Content" class="content-image">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="interaction-buttons">
+                            <button class="interaction-button">
+                                <i class="far fa-thumbs-up"></i>
+                                <span>Like</span>
+                            </button>
+                            <button class="interaction-button">
+                                <i class="far fa-comment"></i>
+                                <span>Comment</span>
+                            </button>
+                            <button class="interaction-button">
+                                <i class="fas fa-donate"></i>
+                                <span>Bless</span>
+                            </button>
+                            <button class="interaction-button">
+                                <i class="fas fa-bullhorn"></i>
+                                <span>Celebrate</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- More content cards can be added here -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="right-sidebar">
+            <div class="sidebar-section">
+                <h3>You ></h3>
+                <ul>
+                    <li><i class="fas fa-history"></i> Recently Watched</li>
+                    <li><i class="fas fa-clock"></i> Activity History</li>
+                    <li><i class="fas fa-list-alt"></i> Playlist</li>
+                    <li><i class="fas fa-upload"></i> Your Posts</li>
+                    <li><i class="fas fa-save"></i> Watch Later</li>
+                    <li><i class="fas fa-download"></i> Downloads</li>
+                    <li><i class="fas fa-hands-helping"></i> Count Your Blessings</li>
+                    <li><i class="fas fa-gear"></i> Settings</li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <h3>Following</h3>
+                <ul>
+                    <!-- Example following item -->
+                    <li><img src="images/artist-1.jpeg" alt="Artist Profile" class="profile-pic"> Artist Name</li>
+                    <li><img src="images/artist-2.jpeg" alt="Artist Profile" class="profile-pic"> Artist Name</li>
+                    <li><img src="images/artist-3.jpeg" alt="Artist Profile" class="profile-pic"> Artist Name</li>
+                    <li><img src="images/artist-4.jpeg" alt="Artist Profile" class="profile-pic"> Artist Name</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-compass"></i>
+            <span>Explore</span>
+        </a>
+        <a href="#" class="create-button">
+            <i class="fas fa-plus"></i>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-bell"></i>
+            <span>Notifications</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>You</span>
+        </a>
+    </nav>
+
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.right-sidebar').classList.toggle('show-sidebar');
+        }
+    </script>
+</body>
+
+</html>

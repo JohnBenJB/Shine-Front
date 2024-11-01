@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shine - Gospel Content Platform</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/profile.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">Shine</div>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+        <i class="fas fa-message message-icon"></i>
+        <i class="fas fa-bars menu-icon" onclick="toggleSidebar()"></i>
+    </header>
+    <div class="content-wrapper">
+        <!-- Your content here -->
+
+        <main class="main-content profile-view private">
+            <!-- Profile Header Section (Similar to public but with edit options) -->
+            <section class="profile-header">
+                <div class="profile-cover" src="images/artist-2.jpeg">
+                    <!-- Cover Photo Background -->
+                    <button class="edit-cover-btn">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                    <div class="profile-picture-wrapper">
+                        <img src="images/artist-1.jpeg" alt="Artist Profile" class="profile-picture">
+                        <button class="edit-profile-pic-btn">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="profile-info">
+                    <div class="profile-main-info">
+                        <div class="profile-name-code">
+                            <div class="editable-field">
+                                <h1 class="profile-name">Artist Name</h1>
+                                <button class="edit-btn"><i class="fas fa-pencil"></i></button>
+                            </div>
+                            <span class="profile-shine-code">SHINE-1234</span>
+                        </div>
+
+                        <div class="profile-actions">
+                            <a href="settings.html">
+                                <button class="action-button">
+                                    <i class="fas fa-gear"></i>
+                                    <span>Settings</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="editable-field">
+                        <p class="profile-bio">
+                            Gospel artist passionate about spreading the word through music.
+                            Based in Lagos, Nigeria. Winner of multiple gospel music awards.
+                        </p>
+                        <button class="edit-btn"><i class="fas fa-pencil"></i></button>
+                    </div>
+
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">10.5K</span>
+                            <span class="stat-label">Followers</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">1.2K</span>
+                            <span class="stat-label">Following</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">156</span>
+                            <span class="stat-label">Posts</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Analytics Dashboard -->
+            <section class="analytics-dashboard">
+                <h2 class="section-title">Your Insights</h2>
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <div class="analytics-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="analytics-info">
+                            <span class="analytics-value">25.3K</span>
+                            <span class="analytics-label">Profile Views</span>
+                            <span class="analytics-trend positive">+12.5%</span>
+                        </div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="analytics-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="analytics-info">
+                            <span class="analytics-value">15.8K</span>
+                            <span class="analytics-label">Content Engagement</span>
+                            <span class="analytics-trend positive">+8.3%</span>
+                        </div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="analytics-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="analytics-info">
+                            <span class="analytics-value">2.1K</span>
+                            <span class="analytics-label">New Followers</span>
+                            <span class="analytics-trend positive">+5.7%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Monetization Section -->
+            <section class="monetization-section">
+                <h2 class="section-title">Earnings & Support</h2>
+                <div class="earnings-overview">
+                    <div class="earnings-card primary">
+                        <div class="earnings-header">
+                            <h3>Total Earnings</h3>
+                            <select class="time-filter">
+                                <option value="this-month">This Month</option>
+                                <option value="this-month">This Week</option>
+                                <option value="last-month">Last Month</option>
+                                <option value="last-month">Last Week</option>
+                                <option value="all-time">All Time</option>
+                            </select>
+                        </div>
+                        <div class="earnings-amount">
+                            <span class="currency">#</span>
+                            <span class="amount">1,234.56</span>
+                        </div>
+                        <button class="withdraw-btn">
+                            <i class="fas fa-wallet"></i>
+                            <span>Withdraw Funds</span>
+                        </button>
+                    </div>
+
+                    <div class="earnings-details">
+                        <div class="earnings-stat-card">
+                            <span class="stat-label">Recent Blessings</span>
+                            <span class="stat-value">32</span>
+                            <span class="stat-period">This week</span>
+                        </div>
+                        <div class="earnings-stat-card">
+                            <span class="stat-label">Top Supporter</span>
+                            <span class="stat-value">John D.</span>
+                            <span class="stat-amount">#50.00</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content Management -->
+            <section class="content-management">
+                <div class="section-header">
+                    <h2 class="section-title">Your Content</h2>
+                    <button class="upload-btn">
+                        <i class="fas fa-upload"></i>
+                        <span>Upload New</span>
+                    </button>
+                </div>
+
+                <!-- Content Navigation -->
+                <div class="content-navigation">
+                    <button class="nav-tab active">All Posts</button>
+                    <button class="nav-tab">Music</button>
+                    <button class="nav-tab">Sermons</button>
+                    <button class="nav-tab">Videos</button>
+                    <button class="nav-tab">Drafts</button>
+                </div>
+
+                <!-- Content Grid -->
+                <div class="content-feed">
+                    <!-- Content Card with Management Options -->
+                    <div class="content-card">
+                        <div class="management-overlay">
+                            <button class="manage-btn edit">
+                                <i class="fas fa-pencil"></i>
+                                <span>Edit</span>
+                            </button>
+                            <button class="manage-btn delete">
+                                <i class="fas fa-trash"></i>
+                                <span>Delete</span>
+                            </button>
+                        </div>
+                        <!-- Regular content card structure -->
+                        <div class="card-header">
+                            <div class="artist-info">
+                                <img src="images/artist-1.jpeg" alt="Artist Avatar" class="artist-avatar">
+                                <div class="artist-details">
+                                    <span class="artist-name">New Single Release</span>
+                                    <span class="shine-code">Posted 2 days ago</span>
+                                </div>
+                            </div>
+                            <div class="content-status">
+                                <span class="status-badge">Published</span>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                        <div class="content-image-container">
+                            <img src="images/artist-1.jpeg" alt="Content" class="content-image">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="content-stats">
+                            <div class="stat">
+                                <i class="fas fa-heart"></i>
+                                <span>1.2K</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-comment"></i>
+                                <span>234</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-donate"></i>
+                                <span>$56</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More content cards can be added here -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="right-sidebar">
+            <div class="sidebar-section">
+                <h3>You ></h3>
+                <ul>
+                    <li><i class="fas fa-history"></i> Recently Watched</li>
+                    <li><i class="fas fa-clock"></i> Activity History</li>
+                    <li><i class="fas fa-list-alt"></i> Playlist</li>
+                    <li><i class="fas fa-upload"></i> Your Posts</li>
+                    <li><i class="fas fa-save"></i> Watch Later</li>
+                    <li><i class="fas fa-download"></i> Downloads</li>
+                    <li><i class="fas fa-hands-helping"></i> Count Your Blessings</li>
+                    <li><i class="fas fa-gear"></i> Settings</li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <h3>Following</h3>
+                <ul>
+                    <!-- Example following item -->
+                    <li><img src="images/artist-1.jpeg" alt="Artist Profile" class="profile-pic"> Artist Name</li>
+                    <li><img src="images/artist-2.jpeg" alt="Artist Profile" class="profile-pic"> Artist Name</li>
+                    <li><img src="images/artist-3.jpeg" alt="Artist Profile" class="profile-pic"> Artist Name</li>
+                    <li><img src="images/artist-4.jpeg" alt="Artist Profile" class="profile-pic"> Artist Name</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="home.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="explore.html" class="nav-item">
+            <i class="fas fa-compass"></i>
+            <span>Explore</span>
+        </a>
+        <a href="upload.html" class="create-button">
+            <i class="fas fa-plus"></i>
+        </a>
+        <a href="notification.html" class="nav-item">
+            <i class="fas fa-bell"></i>
+            <span>Notifications</span>
+        </a>
+        <a href="profile.html" class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>You</span>
+        </a>
+    </nav>
+
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.right-sidebar').classList.toggle('show-sidebar');
+        }
+    </script>
+</body>
+
+</html>

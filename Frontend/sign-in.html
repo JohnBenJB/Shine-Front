@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shine - Sign In</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="shine" class="heading-primary">Shine</h1>
+        <p class="subtext">Welcome back to our community</p>
+
+        <!-- Social Login Buttons -->
+        <button class="social-btn">
+            <img src="images/google-logo.png" width="20" height="20" alt="Google logo">
+            Continue with Google
+        </button>
+        <button class="social-btn">
+            <img src="images/fb-logo.png" width="20" height="20" alt="Facebook logo">
+            Continue with Facebook
+        </button>
+
+        <div class="divider">
+            <span>Or sign in with email</span>
+        </div>
+
+        <form class="auth-form">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Enter your email address"
+                    required
+                >
+            </div>
+
+            <div class="form-group password-wrapper">
+                <label for="password">Password</label>
+                <div class="password-container">
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Enter your password"
+                        required
+                    >
+                    <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                        👁️
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-options">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="remember">
+                    Remember me
+                </label>
+                <a href="forgot-password.html" class="forgot-link">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="btn-submit">
+                Sign In
+            </button>
+        </form>
+
+        <p class="text-center">
+            Don't have an account? <a href="registration.html">Create Account</a>
+        </p>
+    </div>
+
+    <script>
+        // Toggle password visibility
+        document.querySelector('.toggle-password').addEventListener('click', function() {
+            const passwordInput = document.querySelector('#password');
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+        });
+
+        // Form submission handling
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const button = this.querySelector('.btn-submit');
+            button.classList.add('loading');
+            button.textContent = 'Signing you in...';
+            
+            // Simulate API call
+            setTimeout(() => {
+                button.classList.remove('loading');
+                button.classList.add('success');
+                button.textContent = 'Signed In!';
+                // Redirect after successful login
+                setTimeout(() => {
+                    window.location.href = 'home.html';
+                }, 300);
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

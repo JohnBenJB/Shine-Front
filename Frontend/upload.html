@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shine - Gospel Content Platform</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/upload.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">Shine</div>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+        <i class="fas fa-message message-icon"></i>
+        <i class="fas fa-bars menu-icon" onclick="toggleSidebar()"></i>
+    </header>
+    <div class="content-wrapper">
+        <!-- Your content here -->
+
+        <main class="main-content content-upload">
+            <div class="upload-container">
+                <!-- Header Section -->
+                <header class="upload-header">
+                    <h1>Upload Content</h1>
+                </header>
+
+                <!-- Upload Form -->
+                <form class="upload-form">
+                    <!-- Content Type Selection -->
+                    <div class="form-section">
+                        <h2>Content Type</h2>
+                        <div class="content-type-options">
+                            <label class="type-option">
+                                <input type="radio" name="content-type" value="music">
+                                <div class="option-card">
+                                    <i class="fas fa-music"></i>
+                                    <span>Music</span>
+                                </div>
+                            </label>
+                            <label class="type-option">
+                                <input type="radio" name="content-type" value="video">
+                                <div class="option-card">
+                                    <i class="fas fa-video"></i>
+                                    <span>Video</span>
+                                </div>
+                            </label>
+                            <label class="type-option">
+                                <input type="radio" name="content-type" value="sermon">
+                                <div class="option-card">
+                                    <i class="fas fa-church"></i>
+                                    <span>Sermon</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Basic Information -->
+                    <div class="form-section">
+                        <h2>Basic Information</h2>
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" id="title" name="title" placeholder="Enter title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea id="description" name="description" placeholder="Enter description" rows="4"
+                                required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- File Upload Section -->
+                    <div class="form-section">
+                        <h2>Content Upload</h2>
+                        <div class="upload-areas">
+                            <!-- Main Content Upload -->
+                            <div class="upload-area" id="content-upload">
+                                <input type="file" id="content-file" accept="audio/*,video/*" hidden>
+                                <div class="upload-placeholder">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <h3>Upload Content</h3>
+                                    <p>Drag and drop your file here or click to browse</p>
+                                    <span class="file-info">Maximum file size: 500MB</span>
+                                </div>
+                            </div>
+
+                            <!-- Thumbnail Upload -->
+                            <div class="upload-area" id="thumbnail-upload">
+                                <input type="file" id="thumbnail-file" accept="image/*" hidden>
+                                <div class="upload-placeholder">
+                                    <i class="fas fa-image"></i>
+                                    <h3>Upload Thumbnail</h3>
+                                    <p>Drag and drop image or click to browse</p>
+                                    <span class="file-info">Recommended size: 1280x720px</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tags & Categories -->
+                    <div class="form-section">
+                        <h2>Tags & Categories</h2>
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select a category</option>
+                                <option value="worship">Worship</option>
+                                <option value="praise">Praise</option>
+                                <option value="sermon">Sermon</option>
+                                <option value="testimony">Testimony</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="tags">Tags</label>
+                            <div class="tags-input-container">
+                                <div class="tags-list">
+                                    <!-- Tags will be inserted here via JavaScript -->
+                                </div>
+                                <input type="text" id="tags-input" placeholder="Add tags (press Enter to add)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blessing Settings -->
+                    <div class="form-section">
+                        <h2>Blessing Settings</h2>
+                        <div class="blessing-toggle">
+                            <label class="switch">
+                                <input type="checkbox" id="enable-blessing" name="enable-blessing">
+                                <span class="slider round"></span>
+                            </label>
+                            <span class="toggle-label">Enable Blessings for this content</span>
+                        </div>
+                        <div class="blessing-options" id="blessing-options">
+                            <div class="suggested-amounts">
+                                <h3>Suggested Blessing Amounts</h3>
+                                <div class="amount-chips">
+                                    <div class="amount-chip">
+                                        <input type="number" placeholder="Amount" value="5">
+                                        <button class="remove-amount"><i class="fas fa-times"></i></button>
+                                    </div>
+                                    <div class="amount-chip">
+                                        <input type="number" placeholder="Amount" value="10">
+                                        <button class="remove-amount"><i class="fas fa-times"></i></button>
+                                    </div>
+                                    <button class="add-amount"><i class="fas fa-plus"></i> Add Amount</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Header Actions-->
+                    <div class="header-actions">
+                        <button class="action-button" data-action="save-draft">
+                            <i class="fas fa-save"></i>
+                            <span>Save Draft</span>
+                        </button>
+                        <button class="action-button primary" data-action="publish">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <span>Publish</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="right-sidebar">
+            <div class="sidebar-section">
+                <h3>You ></h3>
+                <ul>
+                    <li><i class="fas fa-history"></i> Recently Watched</li>
+                    <li><i class="fas fa-clock"></i> Activity History</li>
+                    <li><i class="fas fa-list-alt"></i> Playlist</li>
+                    <li><i class="fas fa-upload"></i> Your Posts</li>
+                    <li><i class="fas fa-save"></i> Watch Later</li>
+                    <li><i class="fas fa-download"></i> Downloads</li>
+                    <li><i class="fas fa-hands-helping"></i> Count Your Blessings</li>
+                    <li><i class="fas fa-gear"></i> Settings</li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <h3>Following</h3>
+                <ul>
+                    <!-- Example following item -->
+                    <li><img src="images/artist-1.jpeg" alt="Artist Profile" class="profile-pic"> Artist Name</li>
+                    <li><img src="images/artist-2.jpeg" alt="Artist Profile" class="profile-pic"> Artist Name</li>
+                    <li><img src="images/artist-3.jpeg" alt="Artist Profile" class="profile-pic"> Artist Name</li>
+                    <li><img src="images/artist-4.jpeg" alt="Artist Profile" class="profile-pic"> Artist Name</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="home.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="explore.html" class="nav-item">
+            <i class="fas fa-compass"></i>
+            <span>Explore</span>
+        </a>
+        <a href="upload.html" class="create-button">
+            <i class="fas fa-plus"></i>
+        </a>
+        <a href="notification.html" class="nav-item">
+            <i class="fas fa-bell"></i>
+            <span>Notifications</span>
+        </a>
+        <a href="profile.html" class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>You</span>
+        </a>
+    </nav>
+
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.right-sidebar').classList.toggle('show-sidebar');
+        }
+    </script>
+</body>
+
+</html>

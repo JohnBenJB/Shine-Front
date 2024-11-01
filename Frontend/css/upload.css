@@ -1,0 +1,346 @@
+/* Content Upload Page Styles */
+
+.content-upload {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    padding: var(--spacing-md);
+}
+
+.upload-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Header Styles */
+.upload-header {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upload-header h1 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.header-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.action-button {
+    padding: 8px 16px;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid #eaeaea;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.action-button.primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.action-button:hover {
+    border-color: var(--primary-color);
+}
+
+.action-button.primary:hover {
+    opacity: 0.9;
+}
+
+/* Form Styles */
+.upload-form {
+    padding: var(--spacing-md);
+}
+
+.form-section {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+}
+
+/* Content Type Selection */
+.content-type-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+}
+
+.type-option {
+    cursor: pointer;
+}
+
+.type-option input[type="radio"] {
+    display: none;
+}
+
+.option-card {
+    padding: var(--spacing-md);
+    border: 2px solid #eaeaea;
+    border-radius: var(--border-radius-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    transition: all 0.2s ease;
+}
+
+.option-card i {
+    font-size: 2rem;
+    color: #666;
+}
+
+.type-option input[type="radio"]:checked + .option-card {
+    border-color: var(--primary-color);
+    background-color: rgba(255, 215, 0, 0.1);
+}
+
+.type-option input[type="radio"]:checked + .option-card i {
+    color: var(--primary-color);
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #eaeaea;
+    border-radius: var(--border-radius-sm);
+    background-color: white;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Upload Areas */
+.upload-areas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+}
+
+.upload-area {
+    border: 2px dashed #eaeaea;
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-md);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.upload-area:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(255, 215, 0, 0.1);
+}
+
+.upload-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.upload-placeholder i {
+    font-size: 2rem;
+    color: #666;
+}
+
+.file-info {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Tags Input */
+.tags-input-container {
+    border: 1px solid #eaeaea;
+    border-radius: var(--border-radius-sm);
+    padding: 8px;
+    background-color: white;
+}
+
+.tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.tag-item {
+    background-color: var(--bg-color);
+    padding: 4px 8px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.9rem;
+}
+
+.tag-item button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #666;
+}
+
+#tags-input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+/* Blessing Settings */
+.blessing-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Amount Chips */
+.amount-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+}
+
+.amount-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px;
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius-sm);
+}
+
+.amount-chip input {
+    width: 60px;
+    border: none;
+    background: none;
+    outline: none;
+    text-align: center;
+}
+
+.remove-amount {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #666;
+}
+
+.add-amount {
+    padding: 4px 12px;
+    border: 1px dashed #ccc;
+    border-radius: var(--border-radius-sm);
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .upload-header {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        text-align: center;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .upload-areas {
+        grid-template-columns: 1fr;
+    }
+
+    .content-type-options {
+        grid-template-columns: 1fr;
+    }
+}

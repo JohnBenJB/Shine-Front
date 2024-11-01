@@ -1,0 +1,95 @@
+/* Featured Artists Carousel */
+.featured-artists {
+    padding: var(--spacing-md);
+}
+
+
+
+/* Trending Content Styles */
+.trending-content {
+    padding: var(--spacing-md);
+}
+
+.content-category {
+    margin-bottom: var(--spacing-md);
+}
+
+.category-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Search and Filter Styles */
+.search-and-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md);
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: var(--spacing-md);
+}
+
+.filter-options {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.filter-button,
+.filter-select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.9rem;
+    background-color: var(--bg-color);
+    cursor: pointer;
+}
+
+.filter-button:hover,
+.filter-select:hover {
+    background-color: #f1f1f1;
+}
+
+.filter-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+    padding-right: 24px;
+}
+
+/* Content Categories Grid */
+.content-categories {
+    padding: var(--spacing-md);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.content-card {
+    height: auto;
+}
+
+.interaction-buttons{
+    box-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .search-and-filter {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+    }
+
+    .filter-options {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
